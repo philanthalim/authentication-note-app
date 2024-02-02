@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  background-color: white;
+  border-bottom: 1px solid gray;
+  height: 70px;
+  align-items: center;
+  display: flex;
+
+  h1{
+   margin: 0;
+   color: darkblue;
+  }
+}
+
+.form{
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 190px;
+  justify-content: space-around;
+}
+
+.note_form{
+  display: flex;
+  flex-direction: column;
+  max-width: 1316px;
+  align-items: center;
+  height: 280px;
+  justify-content: space-around;
+  border: 1px solid grey;
+  margin: 40px 200px;
+  border-radius: 10px;
+}
+
+.card_container{
+  display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+  border-radius: 10px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 260px;
+  padding: 38px 35px 15px;
+  margin-bottom: 20px;
+}
+
+.desc{
+  height: 170px;
+  width: 300px;
+}
