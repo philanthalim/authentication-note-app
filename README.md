@@ -1,21 +1,9 @@
 # React Assignment
 
-Welcome candidate to Agridence React frontend challenge! The goal of this assignment is to test your knowledge and practices that you have on a day-to-day basis.
+https://main--zesty-puffpuff-07b7fd.netlify.app/
 
 ## How to Start?
-Import the project as a private repo https://github.com/new/import 
-
-![import-project](images/import-project.png)
-
-Clone your private repo into your folder
-![clone-local](images/clone-local.png)
-
 start the project using `npm start`
-
-### Note
-- You may choose to any component/UI libraries for the design as we are not looking at how good you are at designing the components :)
-- You do not need to make a Backend API server for this challenge. Just use the user.json data.
-- You can store the information you need on redux or local storage.
 
 ## Requirements
 - As a user, When I login with the correct credential, I should be able to access my personal notes.
@@ -27,19 +15,6 @@ start the project using `npm start`
 - As a note, I should have a title that is shown in the user's personal notes
 - As a note, I should have a description that is shown in the detail view.
 
-## Submission
-go to your private repo settings and add the reviewers as the collaborators
-![add-collaborators](images/add-collaborators.png)
-
-
-## React assignment reviewers
-- [bebarle](https://github.com/bebarle)
-- [sruthiganesh-HC](https://github.com/sruthiganesh-HC)
-- [weikiat87](https://github.com/weikiat87)
-- [abhi-agridence](https://github.com/abhi-agridence)
-
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -1,35 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"
-import {CHECK_USER} from '../actions/user';
+import { useNavigate } from "react-router-dom";
+import { CHECK_USER } from "../actions/user";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [formData, setFormData] = useState([{ username: "", password: "" }]);
+  const { errorMsg, isAuthenticated } = useSelector((state) => state.user);
 
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const [formData,setFormData]=useState([{username:"",password:""}])
-    const {errorMsg, isAuthenticated} = useSelector((state) => state.user);
-
-    useEffect(() => {
-      if (isAuthenticated) {
-        navigate("/dashboard");
-      }
-     
-    }, [isAuthenticated]);
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.className]: e.target.value });
-      };
-
-    const handleSubmitEvent=(e)=>{
-        e.preventDefault()
-        dispatch({ type: CHECK_USER, payload: formData });
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/dashboard");
     }
+  }, [isAuthenticated]);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.className]: e.target.value });
+  };
+
+  const handleSubmitEvent = (e) => {
+    e.preventDefault();
+    dispatch({ type: CHECK_USER, payload: formData });
+  };
   return (
-  <form className="form" onSubmit={handleSubmitEvent}>
+    <form className="form" onSubmit={handleSubmitEvent}>
       <div className="form_control">
         <label htmlFor="user-email">Username:</label>
-        <input 
+        <input
           className="username"
           type="email"
           id="user-email"
@@ -43,7 +41,7 @@ export default function Home() {
       <div className="form_control">
         <label htmlFor="password">Password:</label>
         <input
-        className="password"
+          className="password"
           type="password"
           id="password"
           name="password"
@@ -51,7 +49,7 @@ export default function Home() {
           aria-invalid="false"
           onChange={handleChange}
         />
-        <div id="user-password" style={{color:"red"}}>
+        <div id="user-password" style={{ color: "red" }}>
           {errorMsg}
         </div>
       </div>
