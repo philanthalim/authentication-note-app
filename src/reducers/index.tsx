@@ -16,7 +16,7 @@ const initialState = {
       password: "challengeyoumusthmm?",
     },
   ],
-  isAuthenticated: true,
+  isAuthenticated: false,
   errorMsg: null,
   notes: [],
 };
